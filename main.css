@@ -51,9 +51,13 @@ header {
 }
 
 main {
+    width: 100%;
+
+}
+
+.two-col-section {
     display: flex;
     flex-direction: row;
-
 }
 
 nav {
