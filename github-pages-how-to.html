@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Github Pages How To</title>
+</head>
+<body>
+    <main class="main-article-container">
+        <div class="main-content">
+            <div class="section-links-container">
+                <div>
+                    <h2 class="article-subtitle">Steps</h2>
+                </div>
+                <ol class="article-sections">
+                    <li><a id="link-create-repo" class="article-section-link" href="#create-repository">Create a Github Repository</a></li>
+                    <li><a id="link-clone-repo" class="article-section-link" href="#clone-repository">Clone the Repository</a></li>
+                    <li><a id="link-create-index" class="article-section-link" href="#create-index">Create an index.html file</a></li>
+                    <li><a id="link-add-commit-push" class="article-section-link" href="#add-commit-push">Add, Commit, and Push the index.html file</a></li>
+                </ol>
+            </div>
+            <div class="article-sections-content">
+                <div>
+                    <h1 class="article-title">Hosting a website with Github Pages</h1>
+                </div>
+                
+                <div class="article-sections-container">
+                    
+                    <section id="create-repository" class="article-section">
+                        <h4 class="article-section-title">Create a new Github Repository</h4>
+                        <div class="article-content-container">
+                            <p class="article-content">To create a website with Github Pages you first need to create a new repository.  The name of this repository is crucial and must follow a specific pattern.
+                                If you have not already, login to your Github account. If you do not have a Github account, you can sign up for one <a href="https://github.com/signup?user_email=&source=form-home-signup">here</a>.
+                                Once you have logged in, click on the plus button in the upper right hand corner of your screen and select "New repository" (See Image 1.1).
+                            </p>
+                            <div class="content-image-container">
+                                <img class="content-image" src="https://docs.github.com/assets/cb-11427/images/help/repository/repo-create.png" alt="" srcset="">
+                                <div class="content-image-footer">Image 1.1</div>
+                            </div>
+                            <p class="article-content">You now need to give your new repository a name. The name <strong>MUST BE</strong> your Github username followed by "<code class="article-content-code">.github.io</code>". For example, if your Github username is JohnDoe, then your Github repository must be "<code class="article-content-code">JohnDoe.github.io</code>". (See Image 1.2)</p>
+                            <div class="content-image-container">
+                                <img class="content-image" src="https://docs.github.com/assets/cb-34195/images/help/pages/create-repository-name-pages.png" alt="" srcset="">
+                                <div class="content-image-footer">Image 1.2</div>
+                            </div>    
+                            <p class="article-content article-hint">
+                                <strong>Remember:</strong>
+                                Mark your new repository as public before selecting the green "Create repository" button.
+                            </p>
+                        </div>
+                    </section>
+                    <section id="clone-repository" class="article-section">
+                        <h4 class="article-section-title">Clone the Repository</h4>
+                        <div class="article-content-container">
+                            <p class="article-content">
+                                On your local computer open the Terminal Application(or Gitbash on Windows). Navigate to the directory where you would like to store your project ie: Documents folder.
+                                Next, in your Web Browser navigate to <code>Github.com</code>, and go to the main page of the repository. Above the list of files select the green "Code" button. (see Image 1.3) 
+                            </p>
+                            <div class="content-image-container">
+                                <img src="https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png" alt="" srcset="" class="content-image">
+                                <div class="content-image-footer">Image 1.3</div>
+                            </div>
+                            <p class="article-content">
+                                From the dropdown that opens select "ssh" and copy the repository link by selecting the "clipboard" button. (See Image 1.4) 
+                            </p>
+                            <div class="content-image-container">
+                                <img src="https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png" alt="" srcset="" class="content-image">
+                                <div class="content-image-footer">Image 1.4</div>
+                            </div>
+                            <p class="article-content article-hint"><strong>Note: </strong>You will need to have previously setup your Github ssh keys. If you have not done so follow this <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">guide</a>.</p>
+                            <p class="article-content">Back in the Terminal Application, type <code class="article-content-code">Git clone</code> and then paste the link that you copied earlier. (See Figure 1.1)</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.1</div>
+                            </div>
+                            <p class="article-content article-hint"><strong>Note:</strong> make sure you are in the directory where you would like the project to be stored before using the <code class="article-content-code">git clone</code> command.</p>
+                            <p class="article-content">Press enter to create a local clone of the repository. Once finished you should see an output similar to figure 1.2.</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code></p>
+                                    <p><code>> Cloning into `Documents`...</code></p>
+                                    <p><code>> remote: Counting objects: 10, done.</code></p>
+                                    <p><code>> remote: Compressing objects: 100% (8/8), done.</code></p>
+                                    <p><code>> remove: Total 10 (delta 1), reused 10 (delta 1)</code></p>
+                                    <p><code>> Unpacking objects: 100% (10/10), done.</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.2</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="create-index" class="article-section">
+                        <h4 class="article-section-title">Create your index.html file</h4>
+                        <div class="article-content-container">
+                            <p class="article-content">Now that your repository has been cloned locally it is time to add your first file. In the Terminal Application navigate into the repositories local directory on your machine by using the "change directory" command <code class="article-content-code">cd</code>. (See figure 1.3)</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ cd username.github.io</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.3</div>
+                            </div>
+                            <p class="article-content article-hint">
+                                <strong>Remember:</strong>
+                                Replace <code class="article-content-code">username</code> with your Github username.
+                            </p>
+                            <p class="article-content">Now that you have set your directory to the local repository we can create our file by typing <code class="article-content-code">touch index.html</code>. (See Figure 1.4)</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ touch index.html</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.4</div>
+                            </div>
+                            <p class="article-content article-hint">
+                                <strong>Remember:</strong>
+                                Type the command exactly as shown in Figure 1.4 above.
+                            </p>
+                            <p class="article-content">Press enter and the file will have been created in the current directory. Open the file in your editor of choice ie: VS Code, Sublime Text etc... and add some html code to build your page.
+                                You are now ready to add, commit and push your index.html file to Github.
+                            </p>
+                        </div>
+                    </section>
+                    <section id="add-commit-push" class="article-section">
+                        <h4 class="article-section-title">Add, Commit, and Push index.html file to Github</h4>
+                        <div class="article-content-container">
+                            <p class="article-content">Back in the Terminal Application type <code class="article-content-code">git status</code> you should see an output similar to Figure 1.5.</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ git status</code><br>
+                                    <code>On branch main</code><br>
+                                    <code>Your branch is up to date with 'orgin/main'</code></p>
+                                    <p><code>Untracked files:</code><br>
+                                    <code>(Use "git add &lt;file&gt;..." to include in what will be commited</code><br>
+                                        <code style="color: red">   index.html</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.5</div>
+                            </div>
+                            <p class="article-content">Notice that "index.html" is red, this is because the file has not yet been added to the repository. You do this by using the <code class="article-content-code">git add &lt;file&gt;...</code> command. (see Figure 1.6)</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ git add index.html</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.6</div>
+                            </div>
+                            <p class="article-content">Press enter and the file will be added to the repository. Use use <code class="article-content-code">git status</code> again to see what has changed. Notice that "index.html" is now green, this means it is ready to be committed.</p>
+                            <p class="article-content">To commit the file you will need to use the <code class="article-content-code">git commit</code> command. (see Figure 1.7)</p>
+                            <p class="article-content article-hint"><strong>Note: </strong>The <code class="article-content-code">git commit</code> command requires a message, in the figure below replace <code class="article-content-code">commit message goes here</code> with a custom message.(The ' ' are required in the commit message)</p>
+                            <div class="content-image-container">
+                                <div class="article-content-terminal">
+                                    <p><code>$ git commit -m 'commit message goes here'</code></p>
+                                </div>
+                                <div class="content-image-footer">Figure 1.7</div>
+                            </div>
+                            <p class="article-content">Now all that is left is for you to push your commit to Github this is done by simply typing <code class="article-content-code">git push</code>. Press enter and the index.html file will be placed in the Github repository.
+                            If you open the repository in your web browser and hit refresh you will see in the list of files that "index.html" now appears. You may now enter your portfolio url into your web browser.
+                            </p>
+                            <p class="article-content article-hint"><strong>Remember: </strong>Your portfolio url is the name of your repository which should follow the pattern of <code class="article-content-code">username.github.io</code></p>
+                            <p class="article-content article-hint"><strong>Note: </strong>If you see a 404 error after entering the url in the web browser try clearing your browsers cache and then refreshing the page after several minutes.</p>
+                            <p class="article-content">You now have a live Github Pages website, great work!</p>
+                        </div>
+                    </section>
+                    <hr>
+                    <div class="article-footer">
+                        <p class="article-footnote">* Images courtesy of docs.github.com.</p>
+                        <p class="article-footnote">This is not an official Github guide. For more detailed guides on Github visit https://docs.github.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="./article.js"></script>
+    <noscript>Please enable Javascript to keep using this website.</noscript>
+</body>
+</html>
