@@ -338,6 +338,13 @@ nav a:hover {
     font-size: 14px;
     line-height: 26px;
 }
+.bio-contact-link {
+    padding-bottom: 1em;
+
+}
+.bio-contact-body {
+    display: grid;
+}
 
 @-webkit-keyframes blink {
     0% {
