@@ -330,6 +330,15 @@ nav a:hover {
     row-gap: 10px;
 }
 
+/********************* About ***********************/
+.bio-title {
+    font-size: 3em;
+}
+.bio-body {
+    font-size: 14px;
+    line-height: 26px;
+}
+
 @-webkit-keyframes blink {
     0% {
         color:#1d1d1f
